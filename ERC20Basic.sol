@@ -44,8 +44,8 @@ interface IERC20{
 contract ERC20Basic is IERC20 {
     
     string public constant name = "ERC20BlockchainAZ";
-    string public constant symbol = "ERC";
-    uint8 public constant decimals = 18;
+    string public constant symbol = "ARA";
+    uint8 public constant decimals = 2;
     
     
      event Transfer(address indexed from, address indexed to, uint256 tokens);
@@ -68,6 +68,7 @@ contract ERC20Basic is IERC20 {
     }
     
     function increaseTotalSupply(uint newTokensAmount) public {
+        
         totalSupply_ += newTokensAmount;
         balances[msg.sender] += newTokensAmount;
     }
